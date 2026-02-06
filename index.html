@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEYLASH BEAUTY POIPET - Pricelist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;600;700&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #fff5f7; 
+        }
+        
+        .luxury-font { font-family: 'Dancing Script', cursive; }
+
+        .service-card { 
+            background: white; 
+            border: 1px solid #ffe4e9;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border-radius: 24px;
+            height: 100%;
+        }
+        
+        .service-card:hover { 
+            border-color: #f472b6; 
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -15px rgba(244, 114, 182, 0.4);
+        }
+
+        .big-preview-img {
+            width: 100%;
+            height: 300px; /* Ukuran gambar besar dan jelas */
+            object-fit: cover;
+            border-bottom: 2px solid #fff5f7;
+            background-color: #fdf2f8;
+        }
+
+        #orderModal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="text-slate-700 antialiased">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md py-4 px-6 border-b border-pink-100">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-pink-500 luxury-font">Beylash Beauty</h1>
+            <div class="flex gap-4">
+                <a href="https://wa.me/6283196888315" class="text-pink-500 hover:scale-110 transition"><i class="fab fa-whatsapp fa-lg"></i></a>
+                <a href="https://t.me/beylashpoipet" class="text-pink-500 hover:scale-110 transition"><i class="fab fa-telegram fa-lg"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 pb-32 pt-10">
+        
+        <header class="text-center mb-16">
+            <div class="inline-block px-4 py-1 rounded-full bg-pink-100 text-pink-600 text-xs font-bold mb-4 tracking-widest uppercase">Pricelist</div>
+            <h2 class="text-5xl font-bold mb-2 text-slate-800 luxury-font">Beylash Beauty Poipet</h2>
+            <p class="text-slate-500 italic">"Your Beauty is Our Priority"</p>
+        </header>
+
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3 text-pink-600 uppercase tracking-widest">
+                <span class="text-3xl">💗</span> BEHEL FASHION
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div onclick="openOrder('Behel fashion 8brecket a/b', '800฿')" class="service-card">
+                    <img src="LINK_GAMBAR_DI_SINI" alt="Behel 8" class="big-preview-img">
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-800 text-lg">Behel Fashion 8 Brecket</h3>
+                        <p class="text-xs text-slate-400 italic mb-4">Atas Atau Bawah</p>
+                        <p class="text-2xl font-bold text-pink-500">800฿</p>
+                    </div>
+                </div>
+
+                <div onclick="openOrder('Behel fashion 10brecket a/b', '1000฿')" class="service-card">
+                    <img src="LINK_GAMBAR_DI_SINI" alt="Behel 10" class="big-preview-img">
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-800 text-lg">Behel Fashion 10 Brecket</h3>
+                        <p class="text-xs text-slate-400 italic mb-4">Atas Atau Bawah</p>
+                        <p class="text-2xl font-bold text-pink-500">1000฿</p>
+                    </div>
+                </div>
+
+                <div onclick="openOrder('Behel Perawatan a/b', '3000฿')" class="service-card">
+                    <img src="LINK_GAMBAR_DI_SINI" alt="Perawatan" class="big-preview-img">
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-800 text-lg">Behel Perawatan</h3>
+                        <p class="text-xs text-slate-400 italic mb-4">Professional Care (Atas/Bawah)</p>
+                        <p class="text-2xl font-bold text-pink-500">3000฿</p>
+                    </div>
+                </div>
+
+                <div onclick="openOrder('Behel thailand 8brecket a/b', '800฿')" class="service-card">
+                    <img src="https://i.ibb.co/tPch4BM4/photo-2026-02-06-10-43-30.jpg" alt="Thailand" class="big-preview-img">
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-800 text-lg">Behel Thailand 8 Brecket</h3>
+                        <p class="text-xs text-slate-400 italic mb-4">Atas Atau Bawah</p>
+                        <p class="text-2xl font-bold text-pink-500">800฿</p>
+                    </div>
+                </div>
+
+                <div onclick="openOrder('Behel keramic 8brecket', '1500฿')" class="service-card">
+                    <img src="https://i.ibb.co/67gwHVdj/photo-2026-02-06-10-22-16.jpg" alt="Behel Keramik" class="big-preview-img">
+                    <div class="p-6">
+                        <h3 class="font-bold text-slate-800 text-lg">Behel Keramik 8 Brecket</h3>
+                        <p class="text-xs text-slate-400 italic mb-4">Transparan / Natural</p>
+                        <p class="text-2xl font-bold text-pink-500">1500฿</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-8 flex items-center gap-3 text-pink-600 uppercase tracking-widest">
+                <span class="text-3xl">💗</span> EYELASH EXTENSION
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div onclick="openOrder('Eyelash Natural', '400฿')" class="service-card">
+                    <img src="LINK_GAMBAR" alt="Natural" class="big-preview-img">
+                    <div class="p-6 text-center">
+                        <h3 class="font-bold text-slate-800 text-lg">Natural</h3>
+                        <p class="text-2xl font-bold text-pink-500 mt-2">400฿</p>
+                    </div>
+                </div>
+
+                <div onclick="openOrder('Eyelash Medium', '500฿')" class="service-card">
+                    <img src="https://i.ibb.co/9H7WLH9P/photo-2026-02-06-10-50-58.jpg" alt="Medium" class="big-preview-img">
+                    <div class="p-6 text-center">
+                        <h3 class="font-bold text-slate-800 text-lg">Medium</h3>
+                        <p class="text-2xl font-bold text-pink-500 mt-2">500฿</p>
+                    </div>
+                </div>
+
+                <div onclick="openOrder('Eyelash Double volume', '600฿')" class="service-card">
+                    <img src="LINK_GAMBAR" alt="Double volume" class="big-preview-img">
+                    <div class="p-6 text-center">
+                        <h3 class="font-bold text-slate-800 text-lg">Double Volume</h3>
+                        <p class="text-2xl font-bold text-pink-500 mt-2">600฿</p>
+                    </div>
+                </div>
+
+                <div onclick="openOrder('Eyelash Anime lash', '700฿')" class="service-card">
+                    <img src="https://i.ibb.co/qLJGtkHk/photo-2026-02-06-10-50-28.jpg" alt="Anime" class="big-preview-img">
+                    <div class="p-6 text-center">
+                        <h3 class="font-bold text-slate-800 text-lg">Anime Lash</h3>
+                        <p class="text-2xl font-bold text-pink-500 mt-2">700฿</p>
+                    </div>
+                </div>
+
+                <div onclick="openOrder('Eyelash Cat Eye', '700฿')" class="service-card">
+                    <img src="LINK_GAMBAR" alt="Cat Eye" class="big-preview-img">
+                    <div class="p-6 text-center">
+                        <h3 class="font-bold text-slate-800 text-lg">Cat Eye</h3>
+                        <p class="text-2xl font-bold text-pink-500 mt-2">700฿</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div id="orderModal" onclick="closeOrder(event)">
+        <div class="bg-white p-8 rounded-[32px] w-full max-w-sm text-center border border-pink-100 shadow-2xl" onclick="event.stopPropagation()">
+            <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-calendar-check text-pink-500 text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-2">Booking Layanan</h3>
+            <p id="productTitle" class="text-pink-500 font-semibold mb-8"></p>
+            <div class="flex flex-col gap-4">
+                <a id="btnWA" href="#" target="_blank" class="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 rounded-2xl font-bold shadow-lg">
+                    <i class="fab fa-whatsapp fa-lg"></i> WhatsApp
+                </a>
+                <a id="btnTele" href="#" target="_blank" class="flex items-center justify-center gap-3 bg-[#0088cc] text-white py-4 rounded-2xl font-bold shadow-lg">
+                    <i class="fab fa-telegram-plane fa-lg"></i> Telegram
+                </a>
+            </div>
+            <button onclick="closeOrder(null)" class="mt-8 text-slate-400">Kembali</button>
+        </div>
+    </div>
+
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a href="https://t.me/beylashpoipet" class="bg-[#0088cc] w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-xl hover:scale-110 transition">
+            <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a href="https://wa.me/6283196888315" class="bg-[#25D366] w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-xl hover:scale-110 transition">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <footer class="text-center py-12 border-t border-pink-100 bg-white">
+        <p class="text-pink-500 luxury-font text-3xl mb-2">Beylash Beauty Poipet</p>
+        <p class="text-slate-400 text-xs tracking-[0.2em] uppercase font-bold">&copy; 2026 Poipet Cambodia</p>
+    </footer>
+
+    <script>
+        function openOrder(service, price) {
+            const encodedMsg = encodeURIComponent("Halo Beylash Beauty Poipet, saya ingin booking layanan: " + service + " (" + price + ")");
+            document.getElementById('productTitle').innerText = service + " - " + price;
+            document.getElementById('btnWA').href = "https://wa.me/6283196888315?text=" + encodedMsg;
+            document.getElementById('btnTele').href = "https://t.me/beylashpoipet?text=" + encodedMsg;
+            document.getElementById('orderModal').style.display = 'flex';
+        }
+
+        function closeOrder(event) {
+            if (!event || event.target === document.getElementById('orderModal') || event.target.tagName === 'BUTTON') {
+                document.getElementById('orderModal').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
